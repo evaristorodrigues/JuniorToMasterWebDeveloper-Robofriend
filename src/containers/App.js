@@ -7,6 +7,7 @@ import Scroll from '../component/Scroll';
 import ErrorBoundry from '../component/ErrorBoundry'
 import {setSearchField, requestRobots} from '../actions'
 import {connect} from 'react-redux'
+import Header from '../component/Header';
 
 const mapStateToProps = state =>{
     return{
@@ -40,7 +41,7 @@ class App extends React.Component {
         }else{
             return (
                 <div className='tc'> 
-                  <h1 className='f1'>RoboFrieds</h1>
+                  <Header/>
                   <SearchBox searchChange={onSearchChange}/>
                   <Scroll>
                     <ErrorBoundry>
